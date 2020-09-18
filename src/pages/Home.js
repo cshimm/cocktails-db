@@ -19,14 +19,14 @@ export default function Home() {
           const newCocktails = drinks.map((item) => {
             const {
               idDrink,
-              srtDrink,
+              strDrink,
               strDrinkThumb,
               strAlcoholic,
               strGlass,
             } = item;
             return {
               id: idDrink,
-              name: srtDrink,
+              name: strDrink,
               image: strDrinkThumb,
               info: strAlcoholic,
               glass: strGlass,

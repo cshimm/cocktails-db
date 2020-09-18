@@ -1,5 +1,14 @@
-import React from "react";
-
+import React from 'react';
+import CocktailsList from '../components/CocktailList';
+import SearchForm from '../components/SearchForm';
 export default function Home() {
-  return <h1>error page</h1>;
+  const [loading, setLoading] = React.useState(false);
+  const [searchTerm, setSearchTerm] = React.useState('a');
+  const [cocktails, setCocktails] = React.useState([]);
+  return (
+    <main>
+      <SearchForm setSearchTerm={setSearchTerm} />
+      <CocktailsList loading={loading} cocktails={cocktails} />
+    </main>
+  );
 }
